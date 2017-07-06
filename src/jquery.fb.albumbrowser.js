@@ -367,6 +367,15 @@
                                     }
                                 }
                                 var photoLink = $("<a>", { class: "fb-photo-thumb-link", href: $(result.data)[a].source, "data-fb-page": $(result.data)[a].link, "data-fb-id": $(result.data)[a].id});
+								$("body").append("<div>", { id: "fb-root" });
+
+                        (function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s); js.id = id;
+                            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=775908159169504";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));
 								var fbpost = $("<div>", { class: "fb-post", "data-href": 'https://www.facebook.com/'+settings.account+'/posts/'+$(result.data)[a].id });
                                 var marginWidth = 0;
 
