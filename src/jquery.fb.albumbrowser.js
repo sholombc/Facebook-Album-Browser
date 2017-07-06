@@ -1,4 +1,4 @@
-﻿/*
+/*
  * jQuery Plugin: jQuery Facebook Album Browser
  * https://github.com/dejanstojanovic/Facebook-Album-Browser
  * Version 1.9.8
@@ -603,7 +603,7 @@
                     var lightboxContent = $("<div>", { class: "fb-preview-content" });
 
                     overlay.append(lightboxContent);
-                    lightboxContent.append($("<div>", { class: "fb-post",data-href: photoLink}));
+                    lightboxContent.append($("<div>", { class: "fb-post","data-href": $(this).attr("data-fb-page")}));
                     FB.XFBML.parse();
                     //if (settings.showImageText || settings.likeButton || settings.shareButton) {
                     //    lightboxContent.append($("<div>", { class: "fb-preview-text" }));
