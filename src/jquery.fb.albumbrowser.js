@@ -571,7 +571,7 @@
                     var likeBtnContainer = $("<div>", { class: "fb-like-container" });
                     likeBtnContainer.append(likeBtn);
                     container.prepend(likeBtnContainer);
-                    FB.XFBML.parse();
+                    
                 }
 
                 if (settings.shareButton && settings.addThis != null && settings.addThis != "") {
@@ -772,6 +772,7 @@
                         overlay.fadeIn();
                         event.preventDefault();
                         event.stopPropagation();
+						FB.XFBML.parse();
                         return false;
                     }
                 }
