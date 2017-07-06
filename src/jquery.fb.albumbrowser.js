@@ -604,7 +604,6 @@
 
                     overlay.append(lightboxContent);
                     lightboxContent.append($("<div>", { class: "fb-post","data-href": $(this).attr("data-fb-page")}));
-                    FB.XFBML.parse();
                     //if (settings.showImageText || settings.likeButton || settings.shareButton) {
                     //    lightboxContent.append($("<div>", { class: "fb-preview-text" }));
                     //}
