@@ -366,7 +366,8 @@
                                         albumImg = $(result.data)[a].images[i];
                                     }
                                 }
-                                var photoLink = $("<a>", { class: "fb-photo-thumb-link", href: $(result.data)[a].source, "data-fb-page": $(result.data)[a].link });
+                                var photoLink = $("<a>", { class: "fb-photo-thumb-link", href: $(result.data)[a].source, "data-fb-page": $(result.data)[a].link, "data-fb-id": $(result.data)[a].id});
+								var fbpost = $("<div>", { class: "fb-post", "data-href": 'https://www.facebook.com/'+settings.account+'/posts/'+$(result.data)[a].id });
                                 var marginWidth = 0;
 
                                 if (prefWidth > 0) {
@@ -417,7 +418,9 @@
                                         }
                                     }
                                 }
-                                photoListItem.append(photoLink);
+                                //photoListItem.append(photoLink);
+								photoListItem.append(fbpost);
+								FB.XFBML.parse(fbpost);
                                 container.append(photoListItem);
                                 $(container).removeClass("fb-loading-image");
 
