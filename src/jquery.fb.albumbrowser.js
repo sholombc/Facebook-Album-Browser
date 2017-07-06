@@ -603,7 +603,7 @@
                     var lightboxContent = $("<div>", { class: "fb-preview-content" });
 
                     overlay.append(lightboxContent);
-                    lightboxContent.append($("<div>", { class: "fb-post","data-href": $(this).attr("data-fb-page")}));
+                    lightboxContent.append($("<div>", { class: "fb-post fb-preview-img","data-href": $(this).attr("data-fb-page")}));
                     //if (settings.showImageText || settings.likeButton || settings.shareButton) {
                     //    lightboxContent.append($("<div>", { class: "fb-preview-text" }));
                     //}
@@ -771,7 +771,6 @@
                         overlay.fadeIn();
                         event.preventDefault();
                         event.stopPropagation();
-						FB.XFBML.parse();
                         return false;
                     }
                 }
